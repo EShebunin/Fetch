@@ -1,0 +1,22 @@
+@import "slick";
+@import "magnific-popup";
+@import "var";
+@import "fonts";
+html{
+    font-size: var(--main-font-size);
+}
+body{
+    margin: 0;
+    font-family: var(--main-font-fam);
+    font-size: 1rem;
+    color: var(--color-black);
+}
+// *, *:before, *:after {
+//     box-sizing: border-box;
+// }
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    padding: 0;
+}
+@import "container";
+@import "header";
