@@ -1,0 +1,17 @@
+<div class="main__slider">
+    {% set products = [
+        { slide: 'main_slide_img_1.png', name: 'Reebok Aztrek Double'},
+        { slide: 'main_slide_img_2.png', name: 'Reebok Aztrek Double'}
+    ] %}
+    {% for product in products %}
+        {% if product.slide %}
+        <div class="slider__item">
+            <img    src        ="assets/img/{{product.slide}}"
+                    class      = "slider__img"
+                    alt        ="Main slider image"
+            >
+            <div class="slider__text">{{product.name}}</div>
+        </div>
+        {% endif %}
+    {% endfor %}
+</div>
