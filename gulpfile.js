@@ -1,27 +1,37 @@
 "use strict";
 
-const autoprefixer = require("autoprefixer");
-const browsersync = require("browser-sync");
-const cssnano = require("cssnano");
-const del = require("del");
-const gulp = require("gulp");
-const imagemin = require("gulp-imagemin");
-const plumber = require("gulp-plumber");
-const postcss = require("gulp-postcss");
-const sass = require("gulp-sass");
-const twig = require("gulp-twig");
-const webpack = require("webpack");
-const webpackStream = require('webpack-stream');
+const autoprefixer  = require("autoprefixer"),
+      browsersync   = require("browser-sync"),
+      cssnano       = require("cssnano"),
+      del           = require("del"),
+      gulp          = require("gulp"),
+      imagemin      = require("gulp-imagemin"),
+      plumber       = require("gulp-plumber"),
+      postcss       = require("gulp-postcss"),
+      sass          = require("gulp-sass"),
+      twig          = require("gulp-twig"),
+      webpack       = require("webpack"),
+      webpackStream = require('webpack-stream'),
+      concat        = require('gulp-concat');
 
 const { watch, src, dest, parallel, series } = require('gulp');
 
 
-const pagesSrc = ['src/pages/*.twig', 'src/pages/*.html'];
-const libSrc   = ['node_modules/jquery/dist/jquery.min.js', 
-                  'node_modules/slick-carousel/slick/slick.min.js',
-                  'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
-                  'node_modules/jquery-lazy/jquery.lazy.min.js',
-                  'node_modules/jquery-lazy/jquery.lazy.plugins.min.js'];
+const pagesSrc      = ['src/pages/*.twig', 'src/pages/*.html'],
+      pagesWatchSrc = ['src/pages/**/*.twig', 'src/pages/**/*.html'];
+
+
+const scriptLibSrc    =   ['node_modules/jquery/dist/jquery.min.js', 
+                            'node_modules/slick-carousel/slick/slick.min.js',
+                            'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
+                            'node_modules/jquery-lazy/jquery.lazy.min.js',
+                            'node_modules/jquery-lazy/jquery.lazy.plugins.min.js'
+                          ];
+const styleLibSrc     =   ['node_modules/slick-carousel/slick/slick.css',
+                            'node_modules/magnific-popup/dist/magnific-popup.css',
+                            'node_modules/normalize.css/normalize.css'
+                          ]
+
 const styleSrc = ['src/styles/*.scss',
                   'src/styles/*.css'];
 
@@ -65,11 +75,21 @@ function buildStyles() {
     ]))
     .pipe(dest('build/styles/'));
 }
+function buildLibStyles() {
+  return src(styleLibSrc)
+    .pipe(plumber({ errorHandler }))
+    .pipe(concat('libs.min.css'))
+    .pipe(postcss(
+      [cssnano()]
+    ))
+    .pipe(dest('build/styles/'));
+}
 
 function buildLibScripts() {
-  return src(libSrc)
+  return src(scriptLibSrc)
     .pipe(plumber({ errorHandler }))
-    .pipe(dest('build/scripts/lib/'));
+    .pipe(concat('libs.min.js'))
+    .pipe(dest('build/scripts/'));
 }
 function buildScripts() {
   return src('src/scripts/**/*.js')
@@ -89,6 +109,7 @@ function buildAssets(cb) {
 }
 
 function watchFiles() {
+  watch(pagesWatchSrc, buildPages);
   watch(pagesSrc, buildPages);
   watch(styleSrc, buildStyles);
   watch('src/scripts/**/*.js', buildScripts);
@@ -101,7 +122,7 @@ exports.default =
         parallel(
             devServer,
             series(
-              parallel(buildPages, buildStyles, buildLibScripts, buildScripts, buildAssets),
+              parallel(buildPages, buildStyles, buildLibStyles, buildLibScripts, buildScripts, buildAssets),
               watchFiles
             )
         )
