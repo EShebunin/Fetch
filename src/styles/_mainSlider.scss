@@ -8,7 +8,7 @@
     margin: 0;
     padding: 0;
     position: absolute;
-    top: 50%;
+    bottom: 50%;
     z-index: 10;
     font-size: 0;
     border: none;
@@ -43,7 +43,7 @@
         position: absolute;
         bottom: 72px;
         left: 152px;
-        max-width: 402px;
+        max-width: 576px;
 
         font-weight: 700;
         font-size: 4rem;
