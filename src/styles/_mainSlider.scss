@@ -18,7 +18,7 @@
 }
 .main__slider{
     position: relative;
-    width: 100%;
+    // width: 100%;
 }
 .main__slider .slick-arrow.slick-prev{
     left: 0;
@@ -37,7 +37,7 @@
         position: relative;
     }
     &__img{
-        max-width: 100%;
+        width: 100%;
     }
     &__text{
         position: absolute;
