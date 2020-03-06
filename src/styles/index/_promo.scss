@@ -1,0 +1,55 @@
+.promo{
+    margin-bottom: 4.5rem;
+    &__inner{
+        padding-top: 4rem;
+        display: grid;
+        grid-template-rows: 320px 160px 480px;
+        grid-template-columns: 464px 648px;
+        gap: 1.5rem;
+        grid-template-areas:    "block-1 block-3"
+                                "block-2 block-3"
+                                "block-4 block-4";
+    }
+    &__block{
+
+        &--1{
+            grid-area: block-1;
+            background-color: var(--color-pink);
+        }
+        &--2{
+            grid-area: block-2;
+            background-color: var(--color-l-blue);
+        }
+        &--3{
+            grid-area: block-3;
+            background-color: var(--color-l-pink);
+        }
+        &--4{
+            grid-area: block-4;
+            background-color: var(--color-l-gray);
+        }
+    }
+    &__content{
+        padding-left: 1rem;
+        padding-top: 1.5rem;
+        position: relative;
+        z-index: 1;
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 2rem;
+        text-decoration: underline;
+    }
+    &__subtitle{
+        padding-top: 0.5rem;
+    }
+    &__img{
+        &--1{
+            z-index: -1;
+            position: absolute;
+            left: 14px;
+            top: 45px;
+        }
+    }
+}
+

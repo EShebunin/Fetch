@@ -1,10 +1,12 @@
 export default function showHeader(){
-    const HEADER = document.querySelector(".header")
+    const   HEADER = document.querySelector(".header");
+    
     window.addEventListener('scroll', function() {
         if (window.pageYOffset > 40) {
-            HEADER.classList.add('header--fixed');
+            // let THEME = HEADER.getAttribute('data-theme');
+            HEADER.setAttribute('data-theme', "fixed");
         } else {
-            HEADER.classList.remove('header--fixed');
+            HEADER.setAttribute('data-theme', "white");
         }    
     });
 }

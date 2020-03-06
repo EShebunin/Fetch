@@ -3,7 +3,8 @@ function initSliderHeader() {
         infinite:true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows:true
+        arrows:true,
+        adaptiveHeight:false
     });
 }
 export default function initSliders() {

@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Keywords" content="Фетч, одежда, мужская одежда, женская одежда, обувь">
+    <meta name="Description" content="Фетч. Магазин одежды">
+
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="styles/libs.min.css">
     <link rel="stylesheet" href="styles/style.css">
     <title>Fetch</title>
 </head>
 <body>
-    {% include "blocks/header.html" %}
-    {% include "blocks/mainSlider.html" %}
-    {% include "blocks/categories.html" %}
+    {% set index_page = true %}
+    
+    {% include "modules/header.html" %}
+    {% include "index/mainSlider.html" %}
+    {% include "index/categories.html" %}
+    {% include "index/promo.html" %}
+    {% include "modules/footer.html" %}
     
     <script src="scripts/libs.min.js"></script>
 

@@ -1,0 +1,43 @@
+<div class="main__slider">
+    {% set products = [
+        {   
+            slide:      'main_slide_img_1.png', 
+            name:       'Reebok Aztrek Double', 
+            theme:      'white',
+            color_text: 'black'
+        },
+        {
+            slide:      'main_slide_img_2.png', 
+            name:       'Reebok Aztrek Double', 
+            theme:      'black',
+            color_text: 'black'
+        },
+        {
+            slide:      'main_slide_img_3.webp', 
+            name:       'Nike ACG: навстречу новым открытиям', 
+            theme:      'black',
+            color_text: 'white'
+        },
+        {
+            slide:      'main_slide_img_4.png', 
+            name:       'Распродажа до −15%', 
+            theme:      'black',
+            color_text: 'white'
+        }
+    ] %}
+    {% for product in products %}
+        {% if product.slide %}
+        <div class="slider__item" data-theme={{product.theme}}>
+            <img    src        ="assets/img/{{product.slide}}"
+                    class      ="slider__img"
+                    alt        ="Main slider image"
+            >
+            <div    class="slider__text" 
+                    data-color-text={{product.color_text}}
+            >
+            {{product.name}}
+            </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+</div>

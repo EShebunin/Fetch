@@ -1,0 +1,51 @@
+<section class="promo">
+    <div class="container">
+        <div class="promo__inner">
+            {% set contents =[
+                {
+                 id: '1', 
+                 title: 'Лукбук, лето 2019', 
+                 subtitle: 'Стильные образы для тёплых деньков',
+                 src: ['promo_1.png']
+                },
+                {
+                 id: '2', 
+                 title: 'Выбор редакции: часы', 
+                 subtitle: 'ТОП-5 лучших предложений по версии администрации Фетч',
+                 src: ''
+                },
+                {
+                 id: '3', 
+                 title: 'Новая коллекция adidas Originals', 
+                 subtitle: 'Десять крутейших кроссовок',
+                 src: ['promo_2.png']
+                },
+                {
+                id: '4', 
+                title: 'Предзаказ: Maison Margiela Fusion', 
+                subtitle: 'От 92 000 ₽',
+                src: ['promo_3.jpg', 'promo_4.jpg', 'promo_5.jpg']
+                },
+            ] %}
+            {% for item in contents %}
+                <div class="promo__block promo__block--{{item.id}}">
+                    <div class="promo__content">
+                        <h2 class="promo__title promo__title--{{item.id}}">{{item.title}}</h2>
+                        <p class="promo__subtitle promo__subtitle--{{item.id}}">{{item.subtitle}}</p>
+                        
+                        {% if item.id != '2' %}
+                            {% for src in item.src %}
+                            <div class="promo__img">
+                                <img    src="assets/img/{{src}}" 
+                                    alt="Promo Image" 
+                                    class="promo__img--{{item.id}}"
+                                >
+                            </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

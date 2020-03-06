@@ -1,0 +1,23 @@
+.categories{
+    padding-top: 3rem;
+    a{
+        color: var(--color-blue);
+    }
+    &__inner{
+        display: flex;
+    }
+    &__text{
+        margin-right: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        font-size: 1.125rem;
+
+        max-width: 240px;
+        min-height: 193px;
+        &--title{
+            font-weight: 700;
+        }
+    }
+}
