@@ -34,14 +34,17 @@
                         <p class="promo__subtitle promo__subtitle--{{item.id}}">{{item.subtitle}}</p>
                         
                         {% if item.id != '2' %}
-                            {% for src in item.src %}
-                            <div class="promo__img">
-                                <img    src="assets/img/{{src}}" 
-                                    alt="Promo Image" 
-                                    class="promo__img--{{item.id}}"
-                                >
+                        <div class="promo__img">
+                            <div class="promo__img--{{item.id}}">
+                                {% for src in item.src %}
+                                
+                                    <img    src="assets/img/{{src}}" 
+                                        alt="Promo Image" 
+                                    >
+                                
+                                {% endfor %}
                             </div>
-                            {% endfor %}
+                        </div>
                         {% endif %}
                     </div>
                 </div>

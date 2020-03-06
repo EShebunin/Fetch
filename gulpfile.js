@@ -32,8 +32,10 @@ const styleLibSrc     =   ['node_modules/slick-carousel/slick/slick.css',
                             'node_modules/normalize.css/normalize.css'
                           ]
 
-const styleSrc = ['src/styles/*.scss',
-                  'src/styles/*.css'];
+const styleSrc      = [ 'src/styles/*.scss',
+                        'src/styles/*.css'],
+      styleWatchSrc = [ 'src/styles/**/*.scss',
+                        'src/styles/**/*.css'];
 
 
 function devServer(cb) {
@@ -112,6 +114,7 @@ function watchFiles() {
   watch(pagesWatchSrc, buildPages);
   watch(pagesSrc, buildPages);
   watch(styleSrc, buildStyles);
+  watch(styleWatchSrc, buildStyles);
   watch('src/scripts/**/*.js', buildScripts);
   watch('src/assets/**/*.*', buildAssets);
 }

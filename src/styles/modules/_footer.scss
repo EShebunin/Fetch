@@ -4,6 +4,7 @@
     color: var(--color-white);
     a{
         color: var(--color-white);
+        transition: linear 0.5s;
     }
     &__inner{
         display: flex;
@@ -15,8 +16,6 @@
         font-size: 1.125rem;
         font-weight: 700;
         margin-bottom: 0.75rem;
-
-        text-decoration: underline;
     }
     &__links{
         list-style: none;
@@ -27,6 +26,25 @@
             &:last-child{
                 margin-bottom: 0;
             }
+        }
+        &--email{
+            margin-top: 2rem;
+        }
+        :hover{
+            transition: linear 0.5s;
+            opacity: 0.5;
+        }
+    }
+    .phone{
+        text-decoration: none;
+        &--number{
+            display: block;
+            font-weight: 700;
+        }
+        &--subtitle{
+            display: block;
+            font-size: 13px;
+            opacity: 0.75;
         }
     }
 }
