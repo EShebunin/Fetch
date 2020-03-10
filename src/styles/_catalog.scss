@@ -1,0 +1,45 @@
+.catalog{
+    &__header{
+        background-color: var(--color-black);
+        color: var(--color-white);
+
+        display: flex;
+        align-items: center;
+
+        height: 13rem;
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 2rem;
+    }
+}
+.goods{
+    &__list{
+        margin-top: -3.25rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__col{
+        width: 240px;
+        padding-right: 2rem;
+        padding-bottom: 3rem;
+    }
+    &__item{
+        color: var(--color-black);
+    }
+    &__name{
+        padding-top: 0.5rem;
+        padding-bottom: 0.25rem;
+        text-decoration: underline;
+        font-weight: 700;
+        font-size: 1rem;
+    }
+    &__cat{
+        padding-bottom: 0.75rem;
+        font-size: 13px;
+    }
+    &__price{
+        font-weight: 700;
+        font-size: 1rem;
+    }
+}

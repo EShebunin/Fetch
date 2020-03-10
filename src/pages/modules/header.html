@@ -1,12 +1,17 @@
+{% if index_page == true %}
 <header class="header" data-theme="white">
+{% else %}
+<header class="header" data-theme="fixed">
+{% endif %}
     <div class="container">
         <div class="header__inner">
             <a href="#" class="header__logo" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
-                {% if index_page == true %}
+                Фетч
+                <!-- {% if index_page == true %}
                     Фетч            
                 {% else %}
                     <a href="index.html" class="header__logo" title="Фетч" itemprop="url">Фетч</a>    
-                {% endif %}
+                {% endif %} -->
             </a>
             <div class="header__nav" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
                 <a href="catalog.html" class="header__link" title="Одежда"     itemprop="url">Одежда</a>
