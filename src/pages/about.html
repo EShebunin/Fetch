@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include "modules/head.html" %}
+<body>
+    {% include "modules/header.html" %}
+    <section class="about">
+        <div class="container">
+            <h1 class="about__title">О магазине Фетч</h1>
+            <div class="about__inner">
+                <div class="about__text">
+                    <div class="about__description">
+                        <p>
+                            В магазине Фетч представлено более 100 ведущих мировых производителей одежды и обуви.
+                        </p>
+                        <p>
+                            Разнообразие ассортимента обеспечивают товары культовых брендов современности: Barbour, Fred Perry, Norse Projects, Edwin и капсульные коллекции компаний, делающих ставку на эксклюзивность и премиальный статус своей продукции — Stone Island, Polo Ralph Lauren, C.P. Company. 
+                        </p>
+                        <p>
+                            Приобрести последние можно лишь в нескольких торговых точках по всему миру, включая Фетч. 
+                        </p>
+                        <p>
+                            Особый повод для гордости — обширная подборка редких и культовых кроссовок adidas Originals, Nike, New Balance, ASICS, Reebok и другие.
+                        </p>
+                    </div>
+                </div>
+                <div class="about__card">
+                    <div class="about__information">
+                        <p class="address">Москва, Тимирязевская, 3</p>
+                        {% include "modules/contacts.html" %}
+                        <p class="payment">
+                            ИНН/КПП: 2901152637 / 290101001 <br>
+                            ОГРН: 1062901063576 <br>
+                            БИК: 041117601, к/с 30101810100000000601
+                        </p>
+                        <p class="payment">
+                            Расчетный счет: 40702810004000103812 в отделении N8637<br>
+                            Сбербанка России, Архангельск 
+                        </p>
+                        <p class="director">Генеральный директор — Василенко Артём Викторович</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include "modules/footer.html" %}
+    {% include "modules/footer_ligth.html" %}
+</body>
+</html>

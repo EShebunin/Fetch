@@ -5,21 +5,20 @@
 {% endif %}
     <div class="container">
         <div class="header__inner">
+            {% if index_page == true %}
             <a href="#" class="header__logo" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
-                Фетч
-                <!-- {% if index_page == true %}
-                    Фетч            
-                {% else %}
-                    <a href="index.html" class="header__logo" title="Фетч" itemprop="url">Фетч</a>    
-                {% endif %} -->
+                Фетч           
+            {% else %}
+            <a href="index.html" class="header__logo" title="Фетч" itemprop="url">Фетч</a>    
+            {% endif %}
             </a>
             <div class="header__nav" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
                 <a href="catalog.html" class="header__link" title="Одежда"     itemprop="url">Одежда</a>
                 <a href="catalog.html" class="header__link" title="Обувь"      itemprop="url">Обувь</a>
                 <a href="catalog.html" class="header__link" title="Аксессуары" itemprop="url">Аксессуары</a>
-                <a href="#" class="header__link" title="Блог"       itemprop="url">Блог</a>
-                <a href="#" class="header__link" title="Магазин"    itemprop="url">Магазин</a>
-                <a href="#" class="header__link" title="Доставка и оплата" itemprop="url">Доставка и оплата</a>
+                <a href="about.html" class="header__link" title="Блог"       itemprop="url">Блог</a>
+                <a href="about.html" class="header__link" title="Магазин"    itemprop="url">Магазин</a>
+                <a href="about.html" class="header__link" title="Доставка и оплата" itemprop="url">Доставка и оплата</a>
             </div>
             <a href="#" class="header__cart" title="Оформить заказ">
                 <span class="header__icon icon-cart">

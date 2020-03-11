@@ -1,4 +1,5 @@
 <footer class="footer">
+    {% set footer_page = true %}
     <div class="container">
         <div class="footer__inner">
             <div class="footer__content">
@@ -7,13 +8,14 @@
                     <li><a href="#">Магазин</a></li>
                     <li><a href="#">Блог</a></li>
                     <li><a href="#">Доставка и оплата</a></li>
-                    <li class="footer__links--email"><a href="#" >shop@fetch.ru</a></li>
+                    <!-- <li class="footer__links--email"><a href="#" >shop@fetch.ru</a></li>
                     <li class="footer__links--phone">
                         <a href="#" class="phone">
-                            <span class="phone--number">8 800 912-11-42</span>
-                            <span class="phone--subtitle">Звонок бесплатный</span>
+                            <span class="phone__number">8 800 912-11-42</span>
+                            <span class="phone__subtitle phone__subtitle--footer">Звонок бесплатный</span>
                         </a>
-                    </li>
+                    </li> -->
+                {% include "../modules/contacts.html" %}
                 </ul>
             </div>
             {% include "../modules/menu.html" %}

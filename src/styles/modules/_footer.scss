@@ -27,24 +27,9 @@
                 margin-bottom: 0;
             }
         }
-        &--email{
-            margin-top: 2rem;
-        }
         :hover{
             transition: linear 0.5s;
             opacity: 0.5;
-        }
-    }
-    .phone{
-        text-decoration: none;
-        &--number{
-            display: block;
-            font-weight: 700;
-        }
-        &--subtitle{
-            display: block;
-            font-size: 13px;
-            opacity: 0.75;
         }
     }
 }

@@ -43,3 +43,25 @@
         font-size: 1rem;
     }
 }
+.pagination{
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+    &__title{
+        font-size: 13px;
+        color: var(--color-gray);
+    }
+    &__pages{
+        padding-top: 0.25rem;
+        &--link{
+            color: var(--color-gray);
+            text-decoration: none;
+            transition: linear 0.5s;
+            &:hover{
+                transition: linear 0.5s;
+                color: var(--color-black);
+                font-weight: 700;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
