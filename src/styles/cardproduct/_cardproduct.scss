@@ -1,0 +1,38 @@
+.cardproduct{
+    padding-top: 5rem;
+    &__sliders{
+        width: 656px;
+    }
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__slider{
+        width: 656px;
+        &--img{
+            object-fit: cover;
+            width: 656px;
+        }
+    }
+}
+.dots{
+    margin-top: 2rem;
+    &--item{
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+        
+    }
+    // &--img{
+    //     object-fit: cover;
+    //     width: 148px;
+    // }
+}
+.table{
+    width: 402px;
+    height: 267px;
+    background-color: #F2F2F2;
+    &--text{
+        margin-top: 2.5rem;
+        height: 721px;
+    }
+}

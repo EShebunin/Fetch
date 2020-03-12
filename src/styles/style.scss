@@ -14,6 +14,7 @@ h1,h2,h3,h4,h5,h6,p{
     padding: 0;
 }
 @import "container";
+@import "slider";
 @import "modules/header";
 @import "modules/menu";
 @import "index/mainSlider";
@@ -22,5 +23,8 @@ h1,h2,h3,h4,h5,h6,p{
 @import "modules/footer";
 @import "modules/footer_ligth";
 @import "modules/contacts";
+@import "modules/interSlider";
 @import "catalog/catalog";
 @import "about/about";
+@import "cardproduct/cardproduct";
+@import "checkout/checkout";

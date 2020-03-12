@@ -1,0 +1,51 @@
+.checkout{
+    padding-top: 2rem;
+    &__logo{
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 41px;
+    }
+    &__dot{
+        color: #DDDDDD;
+    }
+    &__inner{
+        margin-top: 2rem;
+        display: flex;
+    }
+}
+.order{
+    &__list{
+        max-width: 339px;
+    }
+    &__col{
+        margin-bottom: 1.5rem;
+    }
+    &__item{
+        display: flex;
+    }
+    &__image{
+        width: 160px;
+        object-fit: cover;
+    }
+    &__text{
+        margin-left: 1rem;
+    }
+    &__name{
+        font-weight: 700;
+        font-size: 1rem;
+    }
+    &__cat{
+        margin-top: 0.25rem;
+        margin-bottom: 1rem;
+        font-size: 13px;
+    }
+    &__price{
+        font-weight: 700;
+        font-size: 1rem;
+    }
+}
+.form{
+    width: 488px;
+    height: 470px;
+    background-color: var(--color-gray);
+}

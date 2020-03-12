@@ -1,0 +1,36 @@
+.slick-list {
+    overflow: hidden;
+}
+.slick-track{
+    display: flex;
+}
+.slick-arrow{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 50%;
+    z-index: 10;
+    font-size: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    &:hover{
+        cursor: pointer;
+    }
+}
+.slick-prev{
+    left: 0;
+    &:before{
+        font-family: 'Icons';
+        font-size: 1.3rem;
+        content: '\e801';
+    }
+}
+.slick-next{
+    right: 0;
+    &:before{
+        font-family: 'Icons';
+        font-size: 1.3rem;
+        content: '\e802';
+    }
+}

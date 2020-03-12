@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% include "modules/head.html" %}
+<body>
+    {% include "modules/header.html" %}
+    <section class="cardproduct">
+        <div class="container">
+            <div class="cardproduct__inner">
+                <div class="cardproduct__info">
+                    <h1 class="cardproduct__title">Maison Margiela Fusion Low Sneakers</h1>
+                    <p class="cardproduct__subtitle">Кроссовки</p>
+                    <div class="table"></div>
+                    <div class="table table--text">
+
+                    </div>
+                </div>
+                <div class="cardproduct__sliders">
+                    <div class="cardproduct__slider">
+                        {% set slides = ['1', '2', '3', '4'] %}
+                        {% for slide in slides %}
+                        <div class="cardproduct__slider--item">
+                            <img    src="../assets/img/cardproduct/img-{{slide}}.webp" 
+                                    alt=""
+                                    class="cardproduct__slider--img"
+                            >
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="dots cardproduct__slider--dots">
+                        {% for slide in slides %}
+                        <div class="dots--item">
+                            <img    src="../assets/img/cardproduct/img-{{slide}}-sm.webp" 
+                                    alt=""
+                                    class="dots--img"
+                            >
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include "modules/interSlider.html" %}
+    {% include "modules/footer.html" %}
+    {% include "modules/footer_ligth.html" %}
+    <script src="scripts/libs.min.js"></script>
+
+    <script src="scripts/bundle.js"></script>
+</body>
+</html>

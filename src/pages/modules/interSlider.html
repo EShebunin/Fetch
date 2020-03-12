@@ -1,0 +1,18 @@
+<div class="container">
+    <h1 class="inter__slider--title">Вам может быть интересно</h1>
+    <div class="inter__slider">
+        {% set id = ['1','2','3','4','5','6','7','8','9','10','11','12'] %}
+
+        {% for id in id %}
+        <div class="inter__slider--item">
+            <img    src        ="assets/img/catalog/item-{{id}}.png"
+                    class      ="inter__slider--img"
+                    alt        ="Interisting slider image"
+            >
+            <h2 class="inter__slider--name">Maison Margiela Fusion Low Sneakers</h2>
+            <p class="inter__slider--cat">Кроссовки</p>
+            <p class="inter__slider--price">92 000 ₽</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>

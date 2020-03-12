@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% include "modules/head.html" %}
+<body>
+    <section class="checkout">
+        <div class="container">
+            <h1 class="checkout__logo">Фетч <span class="checkout__dot">•</span> Оформление заказа</h1>
+            <div class="checkout__inner">
+                <div class="order__list">
+                    {% set goods = ['1','2','3'] %}
+                    {% for good in goods %}
+                        <div class="order__col">
+                            <div class="order__item">
+                                <img class="order__image" src="../assets/img/catalog/item-{{good}}.png" alt="Goods Image">
+                                <div class="order__text">
+                                    <h2 class="order__name">Maison Margiela Fusion Low Sneakers</h2>
+                                    <p class="order__cat">Кроссовки</p>
+                                    <p class="order__price">92 000 ₽</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="form"></div>
+            </div>
+        </div>
+    </section>
+    {% include "modules/footer_ligth.html" %}
+
+    <script src="scripts/libs.min.js"></script>
+
+    <!-- <script src="scripts/bundle.js"></script> -->
+</body>
+</html>
