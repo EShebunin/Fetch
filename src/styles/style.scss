@@ -1,7 +1,8 @@
 @import "var";
 @import "fonts";
+@import "mixins";
 html{
-    font-size: var(--main-font-size);
+    font-size: $fontMainSize;
 }
 body{
     margin: 0;
@@ -13,6 +14,11 @@ h1,h2,h3,h4,h5,h6,p{
     margin: 0;
     padding: 0;
 }
+h1{@include rem(64px); line-height: 83px;}
+h2{@include rem(32px); line-height: 41px;}
+h3{@include rem(24px); line-height: 31px;}
+h4{@include rem(18px); line-height: 23px;}
+h5, p{@include rem(16px); line-height: 21px;}
 @import "container";
 @import "slider";
 @import "modules/header";
@@ -24,6 +30,7 @@ h1,h2,h3,h4,h5,h6,p{
 @import "modules/footer_ligth";
 @import "modules/contacts";
 @import "modules/interSlider";
+@import "modules/button";
 @import "catalog/catalog";
 @import "about/about";
 @import "cardproduct/cardproduct";

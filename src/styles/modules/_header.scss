@@ -4,31 +4,29 @@
     left: 0;
     z-index: 10000;
     width: 100%;
+    a{
+        color: var(--color-black);
+        transition: linear 0.5s;
+        &:hover{
+            transition: linear 0.5s;
+            color: var(--color-blue);
+        }
+    }
     &[data-theme="black"] {
         background: linear-gradient(267.53deg, rgba(0, 0, 0, 0) 0.07%, #0C0C0C 99.93%);
         a{
             color: var(--color-white);
-            &.header__link{
+            transition: linear 0.5s;
+            &:hover{
                 transition: linear 0.5s;
-                &:hover{
-                    transition: linear 0.5s;
-                    opacity: 0.5;
-                }
+                opacity: 0.5;
             }
-
         }
     }
-    &[data-theme="white"] {
-        a{
-            color: var(--color-black);
-            &.header__link{
-                transition: linear 0.5s;
-                &:hover{
-                    transition: linear 0.5s;
-                    color: var(--color-blue);
-                }
-            }
-        }
+    &[data-theme="fixed"]{
+        background-color: var(--color-white);
+        animation-name: show__header;
+        animation-duration: 1s;
     }
     &__inner{
         height: 3rem;
@@ -36,13 +34,16 @@
         align-items: center;
     }
     &__logo{
-        font-weight: 700;
-        font-size: 1.5rem;
         margin-right: 2.625rem;
-
         text-decoration: none;
     }
+    &__nav{
+        overflow-x: scroll;
+        padding: 0 20px;
+        overflow: hidden;
+    }
     &__link{
+        line-height: 21px;
         margin-right: 1.5rem;
         &:last-child{
             margin-right: 0;
@@ -53,11 +54,10 @@
         position: relative;
     }
     &__cart{
+        p{
+            display: inline;
+        }
         margin-left: auto;
-        // opacity: 0.5;
-        // :hover{
-        //     opacity: 1;
-        // }
         &--count{
             position: absolute;
             left: 7px;
@@ -77,22 +77,6 @@
             text-align: center;
         }
     }
-    &[data-theme="fixed"]{
-        background-color: var(--color-white);
-        a{
-            color: var(--color-black);
-            &.header__link{
-                transition: linear 0.5s;
-                &:hover{
-                    transition: linear 0.5s;
-                    color: var(--color-blue);
-                }
-            }
-        }
-
-        animation-name: show__header;
-        animation-duration: 1s;
-    }
     @keyframes show__header {
         0%{
             opacity: 0;
@@ -101,6 +85,15 @@
         100%{
             opacity: 1;
             top: 0;
+        }
+    }
+}
+@media ( max-width: 1199px ){
+    .header{
+        &__cart{
+            &--text{
+                display: none!important;
+            }
         }
     }
 }

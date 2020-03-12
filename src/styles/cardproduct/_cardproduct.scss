@@ -7,6 +7,9 @@
         display: flex;
         justify-content: space-between;
     }
+    &__title{
+        @include rem(19px)
+    }
     &__slider{
         width: 656px;
         &--img{
@@ -22,10 +25,6 @@
         margin-left: 0.5rem;
         
     }
-    // &--img{
-    //     object-fit: cover;
-    //     width: 148px;
-    // }
 }
 .table{
     width: 402px;
