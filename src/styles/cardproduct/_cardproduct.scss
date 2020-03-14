@@ -1,17 +1,85 @@
 .cardproduct{
     padding-top: 5rem;
-    &__sliders{
-        width: 656px;
-    }
+    padding-bottom: 4rem;
     &__inner{
         display: flex;
         justify-content: space-between;
     }
+    &__info{
+        max-width: 420px;
+    }
     &__title{
-        @include rem(19px)
+        padding-bottom: 0.25rem;
+    }
+    &__subtitle{
+        @include rem(13px);
+        line-height: 17px;
+
+        padding-bottom: 2rem;
+    }
+    &__form{
+        position: relative;
+        left: -1.5rem;
+        min-width: 402px;
+        background-color: #F2F2F2;
+        padding: 1.5rem;
+        &--row{
+            padding-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            span{
+                min-width: 80px;
+                padding-right: 20px;
+                font-size: 1rem;
+                line-height: 21px;
+            }
+        }
+        &--link{
+            @include rem(13px);
+            line-height: 17px;
+            color: var(--color-black);
+            &:hover{
+                color: var(--color-blue);
+            }
+        }
+        &--button{
+            padding-top: 0.5rem;
+        }
+    }
+    &__table{
+        margin-top: 2.5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        &--title{
+            @include rem(13px);
+            line-height: 17px;
+            color: #AFAFAF
+        }
+        &--content{
+            @include rem(18px);
+            line-height: 23px;
+        }
+        &--description{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            p{
+                padding-bottom: 1rem;
+                &:last-child{
+                    padding-bottom: 0;
+                }
+            }
+        }
+        &--details{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    }
+    &__sliders{
+        max-width: 656px;
     }
     &__slider{
-        width: 656px;
+        // max-width: 656px;
         &--img{
             object-fit: cover;
             width: 656px;
@@ -24,14 +92,5 @@
         margin-right: 0.5rem;
         margin-left: 0.5rem;
         
-    }
-}
-.table{
-    width: 402px;
-    height: 267px;
-    background-color: #F2F2F2;
-    &--text{
-        margin-top: 2.5rem;
-        height: 721px;
     }
 }

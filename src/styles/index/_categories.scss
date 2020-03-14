@@ -8,16 +8,27 @@
     }
     &__text{
         margin-right: 3rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        width: 240px;
+        
+        @include rem(18px);
+        line-height: 23px;
 
-        font-size: 1.125rem;
+        p{
+            padding-bottom: 1rem;
+            &:last-child{
+                padding-bottom: 0;
+            }
+        }
 
-        max-width: 240px;
-        min-height: 193px;
         &--title{
             font-weight: 700;
+        }
+    }
+}
+@media ( max-width: 1199px ){
+    .categories{
+        &__inner{
+            flex-direction: column;
         }
     }
 }

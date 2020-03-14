@@ -1,8 +1,4 @@
 .main__slider{
-    // max-width: 100%;
-    // height: 100%;
-    // object-fit: cover;
-    // overflow: hidden;
     position: relative;
     .slick-prev{
         color: var(--color-white);
@@ -26,11 +22,8 @@
     &__text{
         position: absolute;
         bottom: 72px;
-        left: 152px;
         max-width: 576px;
 
-        font-weight: 700;
-        font-size: 4rem;
         text-decoration: underline;
         &[data-color-text='white']{
             color: var(--color-white);

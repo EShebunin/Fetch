@@ -1,21 +1,17 @@
 .checkout{
     padding-top: 2rem;
-    &__logo{
-        font-weight: 700;
-        font-size: 2rem;
-        line-height: 41px;
-    }
     &__dot{
         color: #DDDDDD;
     }
     &__inner{
         margin-top: 2rem;
         display: flex;
+        justify-content: space-between;
     }
 }
 .order{
     &__list{
-        max-width: 339px;
+        min-width: 464px;
     }
     &__col{
         margin-bottom: 1.5rem;
@@ -30,10 +26,6 @@
     &__text{
         margin-left: 1rem;
     }
-    &__name{
-        font-weight: 700;
-        font-size: 1rem;
-    }
     &__cat{
         margin-top: 0.25rem;
         margin-bottom: 1rem;
@@ -43,9 +35,19 @@
         font-weight: 700;
         font-size: 1rem;
     }
-}
-.form{
-    width: 488px;
-    height: 470px;
-    background-color: var(--color-gray);
+    &__sum{
+        border-top: 1px solid #DDDDDD;
+        text-align: right;
+        &--price{
+            padding-top: 1rem;
+        }
+        &--text{
+            @include rem(13px);
+            line-height: 17px;
+            color: #666666;
+        }
+    }
+    &__form{
+        min-width: 488px;
+    }
 }

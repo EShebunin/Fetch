@@ -4,7 +4,7 @@
 <body>
     <section class="checkout">
         <div class="container">
-            <h1 class="checkout__logo">Фетч <span class="checkout__dot">•</span> Оформление заказа</h1>
+            <h2 class="checkout__logo">Фетч <span class="checkout__dot">•</span> Оформление заказа</h2>
             <div class="checkout__inner">
                 <div class="order__list">
                     {% set goods = ['1','2','3'] %}
@@ -13,15 +13,19 @@
                             <div class="order__item">
                                 <img class="order__image" src="../assets/img/catalog/item-{{good}}.png" alt="Goods Image">
                                 <div class="order__text">
-                                    <h2 class="order__name">Maison Margiela Fusion Low Sneakers</h2>
+                                    <h5 class="order__name">Maison Margiela Fusion Low Sneakers</h5>
                                     <p class="order__cat">Кроссовки</p>
                                     <p class="order__price">92 000 ₽</p>
                                 </div>
                             </div>
                         </div>
                     {% endfor %}
+                    <div class="order__sum">
+                        <h3 class="order__sum--price">276 000 ₽</h3>
+                        <p class="order__sum--text">Доставка бесплатно</p>
+                    </div>
                 </div>
-                <div class="form"></div>
+                <div class="order__form"></div>
             </div>
         </div>
     </section>

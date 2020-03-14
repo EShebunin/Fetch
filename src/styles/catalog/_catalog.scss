@@ -3,14 +3,11 @@
         background-color: var(--color-black);
         color: var(--color-white);
 
-        display: flex;
-        align-items: center;
-
         height: 13rem;
     }
     &__title{
-        font-weight: 700;
-        font-size: 2rem;
+        position: absolute;
+        top: 88px;
     }
 }
 .goods{
@@ -28,11 +25,10 @@
         color: var(--color-black);
     }
     &__name{
+        width: 163px;
         padding-top: 0.5rem;
         padding-bottom: 0.25rem;
         text-decoration: underline;
-        font-weight: 700;
-        font-size: 1rem;
     }
     &__cat{
         padding-bottom: 0.75rem;
@@ -59,9 +55,13 @@
             &:hover{
                 transition: linear 0.5s;
                 color: var(--color-blue);
-                font-weight: 700;
-                font-size: 1.5rem;
+                // font-weight: 700;
+                // font-size: 1.5rem;
             }
         }
     }
+}
+.active{
+    font-weight: 700;
+    font-size: 1.5rem;
 }
