@@ -53,6 +53,50 @@
         }
     }
 }
+.form{
+    &__input{
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        padding-left: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    label{
+        padding-right: 40px;
+    }
+    .input{
+        margin-bottom: 1.5rem;
+        p{
+            font-size: 13px;
+            line-height: 17px;
+            color: #666;
+            margin-top: 5px;
+            margin-left: 11px;
+        }
+    }
+    input, textarea{
+        width: 265px;
+        padding: 8px 11px 10px;
+        font-size: inherit;
+        line-height: inherit;
+        font-family: inherit;
+        box-sizing: border-box;
+        background: #fbfbfb;
+        border: 1px solid #ddd;
+        border-radius: 2px;
+        resize: none;
+    }
+    &__submit{
+        background: #f2f2f2;
+        padding: 24px 24px 20px;
+        display: grid;
+        grid-template-columns: 130px 1fr;
+        grid-gap: 40px;
+        p{
+            font-size: 13px;
+            line-height: 17px;
+        }
+    }
+}
 @media ( max-width: 1199px ){
     .checkout{
         .order{

@@ -55,9 +55,36 @@
                 </div>
                 <div class="checkout__form">
                     <form action class="form">
-                        <label for="email">Эл. почта</label>
-                        <input id="email" type="email" placeholder="petrov@yandex.ru">
-                        <p>Пришлём чеки и трек-номер</p>
+                        <div class="form__input">
+                            <label for="email">Эл. почта</label>
+                            <div class="input">
+                                <input id="email" type="email" placeholder="petrov@yandex.ru">
+                                <p>Пришлём чеки и трек-номер</p>
+                            </div>
+                            <label for="telephone">Телефон</label>
+                            <div class="input">
+                                <input id="telephone" type="tel" placeholder="+7 999 275-12-37">
+                                <p>Менеджер позвонит, чтобы подтвердить заказ</p>
+                            </div>
+                            <label for="city">Город</label>
+                            <div class="input">
+                                <input id="city" type="text" placeholder="Москва">
+                            </div>
+                            <label for="address">Адрес</label>
+                            <div class="input">
+                                <textarea id="address" name="comment" cols="40" rows="3"
+                                placeholder="Тимирязевская, 32, квартира 99, вход со двора"></textarea>
+                            </div>
+                        </div>
+                        <div class="form__submit">
+                            <div class="form__submit--text">
+                                <p>Бесплатная доставка курьером.</p>
+                                <p>Оплата картой онлайн.</p>
+                            </div>
+                            <div class="form__submit--button">
+                                <button class="button" type="submit">Оформить заказ, 276 000 ₽</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
