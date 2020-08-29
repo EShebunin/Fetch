@@ -1,0 +1,34 @@
+.categories{
+    padding-top: 3rem;
+    a{
+        color: var(--color-blue);
+    }
+    &__inner{
+        display: flex;
+    }
+    &__text{
+        margin-right: 3rem;
+        width: 240px;
+        
+        @include rem(18px);
+        line-height: 23px;
+
+        p{
+            padding-bottom: 1rem;
+            &:last-child{
+                padding-bottom: 0;
+            }
+        }
+
+        &--title{
+            font-weight: 700;
+        }
+    }
+}
+@media ( max-width: 1199px ){
+    .categories{
+        &__inner{
+            flex-direction: column;
+        }
+    }
+}

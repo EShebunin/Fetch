@@ -1,0 +1,39 @@
+.about{
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+    &__inner{
+        display: flex;   
+        align-items: flex-start;
+    }
+    &__title{
+        // padding-bottom: 2rem;
+
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    &__text{
+        padding-top: 2rem;
+        flex-basis: 50%;
+    }
+    &__description{
+        max-width: 464px;
+        font-size: 1.125rem;
+        p{
+            line-height: 23px;
+            padding-bottom: 1rem;
+            &:last-child{
+                padding-bottom: 0;
+            }
+        }
+    }
+    &__card{
+        padding: 27px 32px 32px 26px;
+        flex-basis: 50%;
+        background-color: #F2F2F2;
+    }
+    &__information{
+        .payment, .director{
+            margin-top: 2rem;
+        }
+    }
+}

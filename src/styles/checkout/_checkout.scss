@@ -1,0 +1,120 @@
+.checkout{
+    padding-top: 2rem;
+    &__dot{
+        color: #DDDDDD;
+    }
+    &__content{
+        padding-top: 2rem;
+
+        display: grid;
+        grid-template-columns: 464px 488px;
+        gap: 5.5rem;
+    }
+    .order{
+        position: relative;
+        left: -1.5rem;
+        &__items{
+            padding-left: 1.5rem;
+            max-width: 339px;
+        }
+        &__row{
+            margin-bottom: 1.5rem;
+            &:last-child{
+                margin-bottom: 0;
+            }
+
+            display: flex;
+            align-items: flex-start;
+            &--image{
+                width: 160px;
+            }
+            &--text{
+                margin-left: 1rem;
+            }
+            &--cat{
+                margin-top: 0.25rem;
+                margin-bottom: 1rem;
+                @include rem(13px);
+                line-height: 17px;
+            }
+        }
+        &__total{
+            margin-top: 22.95px;
+            border-top: 1px solid #dddddd;
+            text-align: right;
+            &--price{
+                margin-top: 1rem;
+            }
+            &--text{
+                color: var(--color-gray);
+                @include rem(13px);
+                line-height: 17px;
+            }
+        }
+    }
+}
+.form{
+    &__input{
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        padding-left: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    label{
+        padding-right: 40px;
+    }
+    .input{
+        margin-bottom: 1.5rem;
+        p{
+            font-size: 13px;
+            line-height: 17px;
+            color: #666;
+            margin-top: 5px;
+            margin-left: 11px;
+        }
+    }
+    input, textarea{
+        width: 265px;
+        padding: 8px 11px 10px;
+        font-size: inherit;
+        line-height: inherit;
+        font-family: inherit;
+        box-sizing: border-box;
+        background: #fbfbfb;
+        border: 1px solid #ddd;
+        border-radius: 2px;
+        resize: none;
+    }
+    &__submit{
+        background: #f2f2f2;
+        padding: 24px 24px 20px;
+        display: grid;
+        grid-template-columns: 130px 1fr;
+        grid-gap: 40px;
+        p{
+            font-size: 13px;
+            line-height: 17px;
+        }
+    }
+}
+@media ( max-width: 1199px ){
+    .checkout{
+        .order{
+            &__row{
+                &--image{
+                    width: 90px;
+                }
+                &--text{
+                    margin-left: 0.5rem;
+                }
+                &--cat{
+                    margin-top: 0;
+                    margin-bottom: 0.25rem;
+                }
+            }
+            &__total{
+                margin-top: 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,119 @@
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    width: 100%;
+    a{
+        color: var(--color-black);
+        transition: linear 0.5s;
+        &:hover{
+            transition: linear 0.5s;
+            color: var(--color-blue);
+        }
+    }
+    &[data-theme="black"] {
+        background: linear-gradient(267.53deg, rgba(0, 0, 0, 0) 0.07%, #0C0C0C 99.93%);
+        a{
+            color: var(--color-white);
+            transition: linear 0.5s;
+            &:hover{
+                transition: linear 0.5s;
+                opacity: 0.5;
+            }
+        }
+    }
+    &[data-theme="fixed"]{
+        background-color: var(--color-white);
+        animation-name: show__header;
+        animation-duration: 1s;
+    }
+    &__inner{
+        height: 3rem;
+        display: flex;
+        align-items: center;
+    }
+    &__logo{
+        margin-right: 2.625rem;
+        text-decoration: none;
+    }
+    &__nav{
+        overflow-x: scroll;
+        white-space:nowrap;
+        padding: 0 20px;
+        mask-image: linear-gradient(90deg,transparent,rgba(0,0,0,.25) 4px,#000 18px,#000 calc(100% - 18px),rgba(0,0,0,.25) calc(100% - 4px),transparent);
+        &::-webkit-scrollbar{
+            width: 0;
+            height: 0;
+        }
+    }
+    &__link{
+        display: inline-block;
+
+        line-height: 21px;
+        margin-right: 1.5rem;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    &__icon{
+        font-weight: 700;
+        position: relative;
+    }
+    &__cart{
+        p{
+            display: inline;
+        }
+        margin-left: auto;
+        &--count{
+            position: absolute;
+            left: 7px;
+            bottom: 12px;
+
+            background-color: var(--color-blue);
+            color: var(--color-white);
+
+            font-weight: 700;
+            font-size: 0.8125rem;
+
+            display: block;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+
+            text-align: center;
+        }
+    }
+    @keyframes show__header {
+        0%{
+            opacity: 0;
+            top: -70px;
+        }
+        100%{
+            opacity: 1;
+            top: 0;
+        }
+    }
+}
+@media ( max-width: 1199px ){
+    .header{
+        &__cart{
+            &--text{
+                display: none!important;
+            }
+        }
+        &__logo{
+            margin-right: 2rem;
+        }
+        &[data-theme="black"] {
+            background: black;
+        }
+    }
+}
+@media ( max-width: 768px ){
+    .header{
+        &__cart{
+            margin-left: 1rem;
+        }
+    }
+}

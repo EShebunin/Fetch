@@ -1,0 +1,25 @@
+.footer__ligth{
+    padding: 1.5rem 0 2rem 0;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-size: 13px;
+    color: var(--color-gray);
+    a{
+        color: var(--color-gray);
+        transition: linear 0.5s;
+        :hover{
+            transition: linear 0.5s;
+            color: var(--color-white);
+        }
+    }
+    &--inner{
+        display: flex;
+        a:hover{
+            transition: linear 0.5s;
+            color: var(--color-white);
+        }
+    }
+    .person{
+        margin: 0 1.5rem;
+    }
+}

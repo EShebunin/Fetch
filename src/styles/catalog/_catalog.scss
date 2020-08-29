@@ -1,0 +1,67 @@
+.catalog{
+    &__header{
+        background-color: var(--color-black);
+        color: var(--color-white);
+
+        height: 13rem;
+    }
+    &__title{
+        position: absolute;
+        top: 88px;
+    }
+}
+.goods{
+    &__list{
+        margin-top: -3.25rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__col{
+        width: 240px;
+        padding-right: 2rem;
+        padding-bottom: 3rem;
+    }
+    &__item{
+        color: var(--color-black);
+    }
+    &__name{
+        width: 163px;
+        padding-top: 0.5rem;
+        padding-bottom: 0.25rem;
+        text-decoration: underline;
+    }
+    &__cat{
+        padding-bottom: 0.75rem;
+        font-size: 13px;
+    }
+    &__price{
+        font-weight: 700;
+        font-size: 1rem;
+    }
+}
+.pagination{
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+    &__title{
+        font-size: 13px;
+        color: var(--color-gray);
+    }
+    &__pages{
+        padding-top: 0.25rem;
+        &--link{
+            color: var(--color-gray);
+            text-decoration: none;
+            transition: linear 0.5s;
+            &:hover{
+                transition: linear 0.5s;
+                color: var(--color-blue);
+                // font-weight: 700;
+                // font-size: 1.5rem;
+            }
+        }
+    }
+}
+.active{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
